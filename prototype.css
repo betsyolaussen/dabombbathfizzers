@@ -1,0 +1,614 @@
+body {
+	max-width: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	font-family: mr-eaves-modern, sans-serif;
+}
+
+/* home page and interactie menu button */
+
+.home-text {
+	position: absolute;
+	width: 100%;
+  	padding: 20px;
+}
+
+.home-text-alt {
+	position: relative;
+	height: 5em;
+}
+
+.home-text-alt img{
+	width: 80px;
+	display: block;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	left: 50%;
+	right: -50%;
+	transform: translate(-50%, -50%);
+}
+
+.home-text-alt h1 {
+	font-size: 2em;
+	color: #E83151;
+}
+
+@keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+  
+	100% {
+	  opacity: 1;
+	}
+  }
+
+  .animation {
+	color: #E83151;
+	animation: fadeIn 3s;
+  }
+
+  .home-text img {
+	  width: 200px;
+	  display: block;
+	  padding: 0;
+	  margin: 0 auto 0 auto;
+  }
+
+h1 {
+	font-size: 15em;
+	text-align: center;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-family: trumpsoftpro, sans-serif;
+}
+
+h2 {
+	font-size: 2em;
+	text-align: center;
+	margin: 0px;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+ /*interactie navigation button */
+
+.mainNavIcon {
+	width: 20%;
+}
+
+#mySidebar {
+	background-color: #45364B;
+}
+
+.sidebar {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+}
+
+.sidebar li {
+	text-decoration: none;
+	list-style-type: none;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+.sidebar a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: #f1f1f1;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	display: block;
+	transition: 0.3s;
+}
+
+.menu a {
+	font-size: 1.5em;
+}
+
+.submenu a {
+	font-size: 1em;
+}
+
+.sidebar li ul {
+	display: none;
+	position: absolute;
+	z-index: 101;
+
+}
+
+.sidebar a:hover {
+	color: #818181;
+}
+
+.sidebar .closebtn {
+	position: absolute;
+  	top: 0;
+  	right: 25px;
+  	font-size: 36px;
+  	margin-left: 50px;
+}
+
+.openbtn {
+	font-size: 2em;
+	cursor: pointer;
+	background-color: #FF715B;
+  	color: white;
+  	padding: .5em;
+  	border: none;
+}
+
+.openbtn:hover {
+	background-color: #45364B;
+}
+
+/* adjusting content for when nav menu is open */
+#move {
+	margin-left: 0;
+	margin-right: 0;
+	transition: .4s ease-in-out;
+}
+
+#move-jars {
+	margin-left: 0;
+}
+
+/* end of adjusting content for when nav menu is open */
+
+/* bathbombs page and modal information for jars page as well */
+.bathbombs {
+	display: flex;
+	flex-wrap: wrap;
+	animation: fadeIn .8s;
+}
+
+.row {
+	flex: 25%;
+	margin-top: 4em;
+}
+
+.row img {
+	vertical-align: middle;
+	width: 100%;
+}
+/* Style the Image Used to Trigger the Modal */
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {
+	opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 25px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 50px;
+    right: 20%;
+    color: #FF715B;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* end of bath bombs page */
+
+/* jars page */
+
+.jars {
+	padding-top: 5em;
+	display: flex;
+}
+
+
+/* about the company */
+
+.about {
+	max-width: 75%;
+	margin: auto;
+	position: relative;
+	top: 8em;
+	margin-bottom: 5em;
+	font-size: 1.1em;
+	line-height: 1.7em;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.about p {
+	font-size: 1.3em;
+	font-weight: 200;
+}
+
+.about img {
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+
+.about h2 {
+	text-transform: uppercase;
+	font-size: 3em;
+	font-family: trumpsoftpro, sans-serif;
+}
+
+.about2 {
+	margin: auto;
+	padding-top: 4em;
+	max-width: 75%;
+}
+
+/* end of about the company */
+
+/* where to find us page */
+.state-text {
+	position: relative;
+	top: 2.5em;
+	font-family: trumpsoftpro, sans-serif;
+	font-size: 3em;
+}
+select {
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: .5em;
+}
+.custom-select {
+	position: relative;
+	top: 10em;
+	margin: 0 auto 0 auto;
+	display: block;
+   	height: 29px;
+   	overflow: hidden;
+	padding: 1em 15em;
+}
+
+.custom-select::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 8px;
+  top: 50%;
+  right: 1em;
+  margin-top:-4px;
+  z-index: 150;
+  
+}
+
+.custom-select select {
+   background:none;
+   appearance: none;
+   outline: none;
+   border: 1px solid transparent;
+   font-size: 14px;
+   height: 29px;
+   padding: 29px;
+   width: 100%;
+}
+
+option {
+	text-align: left;
+}
+.rounded {
+	-webkit-border-radius: 30px;
+   -moz-border-radius: 30px;
+   border-radius: 30px;
+}
+
+.yellow  { 
+	background-color: #45364B; 
+}
+
+.yellow select  { 
+	color: white; 
+}
+
+#stateselector {
+	font-size: 1.2em;
+	line-height: 1.3em;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 400;
+	font-style: normal;	
+	text-transform: uppercase;
+}
+
+.output {
+	text-align: center;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.state {
+	position: relative;
+	top: 8em;
+	font-size: 1.3em;
+	line-height: 1.5em;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 400;
+	font-style: normal;	
+	text-transform: uppercase;
+	overflow: hidden;
+}
+
+.state li {
+	list-style-type: none;
+}
+/* end of locate us page */
+
+/* whoops page */
+
+.whoops img {
+	position: relative;
+	top: 8em;
+	width: 50%;
+	margin: 0 auto 0 auto;
+	display: block;
+	
+}
+
+.whoops h2 {
+	padding-top: 3em;
+	font-family: trumpsoftpro, sans-serif;
+	font-size: 3em;
+}
+
+.whoops-content {
+	width: 75%;
+	margin: auto;
+}
+
+.whoops ul {
+    list-style: none;
+	line-height: 1.5em;
+	padding: 1em;
+	font-size: 1.2em;
+}
+
+.whoops h3 {
+	font-family: trumpsoftpro, sans-serif;
+	font-size: 2em;
+}
+
+/* end of whoops page */
+/* Information page */
+
+.info {
+	max-width: 70%;
+	position: relative;
+	top: 8em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+.info h2 {
+	font-size: 3em;
+	letter-spacing: .065em;
+	text-transform: uppercase;
+	font-family: trumpsoftpro, sans-serif;
+}
+
+.info h3 {
+	border-bottom: 1px solid #000;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+.info h4 {
+	font-size: 1em;
+	text-transform: uppercase;
+}
+.info p {
+	line-height: 2em;
+	font-size: 1.2em;
+}
+
+.info li {
+	list-style-type: none;
+	line-height: 2em;
+	font-size: 1em;
+}
+
+/* end of information page */
+
+/* beginning of contact page */
+
+.contact {
+	text-align: center;
+	width: 75%;
+	margin: auto;
+	position: relative;
+	top: 5em;
+	margin-bottom: 4em;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.form {
+	margin: auto;
+}
+
+.form p {
+	padding: 1em;
+	letter-spacing: .1em;
+	color: #FF715B;
+}
+.form h3 {
+	font-size: 3em;
+	letter-spacing: .1em;
+	color: black;
+	font-family: trumpsoftpro, sans-serif;
+}
+
+.form input {
+	padding: 1em;
+	margin: .5em;
+	width: 40%;
+	border: none;
+	background-color: #d3d3d3;
+	font-size: 1em;
+}
+
+.button {
+	text-decoration: none;
+	color: white;
+	background-color: black;
+	padding: 1em 5em;
+}
+.button:hover {
+	background-color: #FF715B;
+	color: white;
+	border: 1px solid lightgrey;
+}
+
+/* beginning of footer styles in nav menu */
+
+.footer {
+	border-top: 1px solid #d3d3d3;
+	width: 100%;
+	height: 10em;
+	position: absolute;
+	bottom: 0;
+	clear: both;
+	text-align: center;
+	color: lightgrey;
+	font-size: 1.2em;
+	font-family: mr-eaves-modern, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+}
+
+.social-icons a {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2em;
+	color: #FF715B;
+}
+
+.social-icons i:hover {
+	color:  #000;
+}
+
+/* end of footer styles */
+
+/* For mobile phones: ------------------ */
+      @media all
+
+      and (max-device-width: 480px)
+
+			header {
+				max-width: 100%;
+			}
+
+			@media (min-width: 1200px) {
+				.bathbombs { margin-left: 12em; }
+			}
+
+			@media (max-width: 960px) {
+				.main-nav { width: 100%; margin-top: 8em; text-align: left; }
+				header { height: 12em; }
+				.home-img { padding-top: 12em; }
+				header img { left: 14em; }
+			}
+
+			@media (max-width: 960px) {
+				.bathbombs {margin-top: 4em; }
+				.bathbombs img { width: 100%;}
+				.main-nav ul { text-align: center; }
+				.main-nav li { padding: 0em; }
+				.whoops img { width: 70%; margin-top: 2em;}
+				.jars img { width: 100%; }
+			}
+
+			@media (max-width: 600px) {
+				.bathbombs { margin-top: 6em; width: 100%;}
+				.row { width: 100%; margin: auto; }
+				header img { left: 8em; }
+				aside nav { margin-top: 5em; }
+				.whoops img { width: 100%; margin-top: 1em; }
+				.state-text {max-width: 75%; margin: auto;}
+				.custom-select {padding: 1em 5em;}
+				.home-text {max-width: 90%; margin: auto;}
+			}
